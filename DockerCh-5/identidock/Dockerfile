@@ -1,5 +1,12 @@
-FROM python:3.4
-RUN pip install Flask==0.10.1
+FROM python:3.7
+RUN pip install Flask==2.0.0 uWSGI==2.0.18 Jinja2==3.0.1 MarkupSafe==2.1.1
 WORKDIR /app
 COPY app /app
-CMD ["python","identidock.py"]
+COPY cmd.sh /
+CMD ["/cmd.sh"]
+
+
+
+
+
+
