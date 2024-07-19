@@ -5,6 +5,6 @@ if [ "$ENV" = "DEV" ]; then
     exec python "identidock.py"
 else
     echo "this is the production server"
-    exec uwsgi --http 0.0.0.0:9090 --wsgi-file /app/identidock.py --callable app --stats 0.0.0.0:9191
+    exec uwsgi --http 0.0.0.0:5003 --wsgi-file /app/identidock.py --callable app --stats 0.0.0.0:9191
 fi
 

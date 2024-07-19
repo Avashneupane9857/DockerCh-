@@ -1,0 +1,13 @@
+version: '3.8'
+
+
+services:
+
+ identidock:
+  build: .
+  ports:
+   - "5003:5003"
+  environment:
+   - ENV:DEV
+  volumes:
+   - ./app:/app
