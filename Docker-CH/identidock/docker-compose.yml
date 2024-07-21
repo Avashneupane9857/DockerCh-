@@ -6,7 +6,7 @@ services:
  identidock:
   build: .
   ports:
-   - "5003:5003"
+   - "5005:5002"
   environment:
    - ENV:DEV
   volumes:
