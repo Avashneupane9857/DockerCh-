@@ -11,3 +11,7 @@ services:
    - ENV:DEV
   volumes:
    - ./app:/app
+  links:
+   - dnmonster
+ dnmonster:
+  image: amouat/dnmonster
